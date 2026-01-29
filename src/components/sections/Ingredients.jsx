@@ -7,7 +7,7 @@ export default function Ingredients() {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
     const ingredientImages = [
-        "/images/maca_root_ingredient_1769205849151.png", // Maca
+        "/images/maca_product_new.jpg", // Maca
         "/images/epimedium_ingredient.png", // Epimedium
         "/images/pomegranate_ingredient_1769205861525.png" // Pomegranate
     ];

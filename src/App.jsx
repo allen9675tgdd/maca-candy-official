@@ -4,11 +4,13 @@ import Hero from "./components/sections/Hero";
 import PainPoints from "./components/sections/PainPoints";
 import Features from "./components/sections/Features";
 import Ingredients from "./components/sections/Ingredients";
+import TestReports from "./components/sections/TestReports";
 import Usage from "./components/sections/Usage";
 import FAQ from "./components/sections/FAQ";
 import Partnership from "./components/sections/Partnership";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
+import BackToTop from "./components/ui/BackToTop";
 import { siteConfig } from "./config/site";
 
 export default function App() {
@@ -32,6 +34,7 @@ export default function App() {
         <PainPoints />
         <Features />
         <Ingredients />
+        <TestReports />
         <Usage />
         <FAQ />
         <Partnership />
@@ -39,6 +42,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <BackToTop />
     </div>
   );
 }

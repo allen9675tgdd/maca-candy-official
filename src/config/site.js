@@ -6,7 +6,7 @@ export const siteConfig = {
     wechat: "wxid_oau94b7rj7vj22",
     zalo: "0896995399",
     tiktok: "@allen96750",
-    facebook: "https://www.facebook.com/"
+    facebook: "https://www.facebook.com/profile.php?id=61586270398408&sk=about"
   },
   formLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMgyjnj1hrm7cfeapHmqgCgVdAZvFGXjApgXF3d3cx3JYllA/viewform?usp=publish-editor",
   company: {

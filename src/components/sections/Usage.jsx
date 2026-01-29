@@ -8,7 +8,7 @@ export default function Usage() {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
 
     const modeImages = [
-        "/images/hero_product_image_1769205835383.png", // 应急模式 - 显示产品图
+        "/images/emergency_mode.png", // 应急模式 - 显示产品图
         "/images/exercise_scenario.png" // 日常调理模式
     ];
 

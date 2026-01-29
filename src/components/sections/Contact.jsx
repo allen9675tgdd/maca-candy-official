@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Phone, Mail, ExternalLink, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Phone, Mail, ExternalLink, Send, CheckCircle, AlertCircle, Facebook } from "lucide-react";
 import { siteConfig } from "../../config/site";
 
 // 自定义 WeChat 图标 (线性风格)
@@ -17,6 +17,13 @@ const ZaloIcon = ({ className }) => (
     <svg viewBox="0 0 100 100" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
         <path d="M10,20 Q10,10 20,10 L80,10 Q90,10 90,20 L90,80 Q90,90 80,90 L20,90 Q10,90 10,80 Z" fill="none" stroke="currentColor" strokeWidth="8" />
         <text x="50" y="65" fontSize="35" fontWeight="900" textAnchor="middle" fill="currentColor" fontFamily="Arial, sans-serif" style={{ letterSpacing: '-2px' }}>Zalo</text>
+    </svg>
+);
+
+// 自定义 TikTok 图标
+const TikTokIcon = ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
     </svg>
 );
 
@@ -169,7 +176,7 @@ export default function Contact() {
                 </div>
 
                 {/* 联系方式卡片 Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
+                <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto mb-16">
                     {contactMethods.map((method, idx) => (
                         <motion.button
                             key={method.key}

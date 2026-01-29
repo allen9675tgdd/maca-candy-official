@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  /* 字体系统 */
+  --font-sans: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+
+  /* 品牌粉色系统 - 活力能量风格 */
+  --color-brand-50: #FCE4EC;
+  --color-brand-100: #F8BBD0;
+  --color-brand-200: #F48FB1;
+  --color-brand-300: #F06292;
+  --color-brand-400: #EC407A;
+  /* 活力粉色主色调 */
+  --color-brand-500: #E91E63;
+  /* 更深邃的粉色 */
+  --color-brand-600: #D81B60;
+  /* 增强的深粉色 */
+  --color-brand-700: #C2185B;
+  --color-brand-800: #AD1457;
+  --color-brand-900: #880E4F;
+
+  /* 中性色系统 - 现代暗黑风格 */
+  --color-studio-white: #FAFAFA;
+  --color-herbal-gray-50: #F5F5F7;
+  --color-herbal-gray-100: #E1E1E6;
+  --color-herbal-gray-200: #C7C7CC;
+  --color-herbal-gray-300: #8E8E93;
+  --color-ink-black: #000000;
+
+  /* 渐变 */
+  --gradient-hero: linear-gradient(135deg, var(--color-brand-900) 0%, var(--color-brand-700) 100%);
+  --gradient-overlay: linear-gradient(to bottom, transparent 0%, rgba(136, 14, 79, 0.7) 100%);
+}
+
+@layer base {
+  * {
+    @apply border-herbal-gray-200;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-ink-black text-white;
+    font-family: var(--font-sans);
+  }
+
+  /* 标题层级 */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-white;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+
+  /* 容器 */
+  .container-custom {
+    @apply max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12;
+  }
+
+  /* 区块间距 */
+  .section-py {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* 网格布局 - 生物科技风格的非对称网格 */
+  .grid-asymmetric {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12;
+  }
+
+  /* 卡片 */
+  .card-biotech {
+    @apply bg-brand-900/20 border border-brand-700/30 p-8 transition-all duration-300;
+  }
+
+  .card-biotech:hover {
+    @apply border-brand-500 shadow-lg bg-brand-900/30;
+  }
+
+  /* 按钮 */
+  .btn-primary {
+    @apply bg-brand-500 text-white px-8 py-3 font-semibold tracking-wide hover:bg-brand-600 shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 transition-all duration-300 inline-flex items-center justify-center gap-2 rounded-full;
+  }
+
+  .btn-outline {
+    @apply border-2 border-brand-400 text-brand-400 px-8 py-3 font-semibold tracking-wide hover:bg-brand-500 hover:text-white hover:border-brand-500 transition-all duration-300 inline-flex items-center justify-center gap-2 rounded-full;
+  }
+
+  /* 分割线 */
+  .divider-thin {
+    @apply w-16 h-px bg-brand-500;
+  }
+
+  /* 滚动动画 */
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 图片蒙版 */
+  .img-overlay {
+    @apply relative overflow-hidden;
+  }
+
+  .img-overlay::after {
+    content: "";
+    @apply absolute inset-0 bg-gradient-to-b from-transparent to-brand-900/20 pointer-events-none;
+  }
+}

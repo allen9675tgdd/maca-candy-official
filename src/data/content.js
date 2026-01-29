@@ -134,8 +134,11 @@ export const content = {
   },
   contact: {
     title: "联系我们",
-    email: "info@macacandy.com",
-    phone: "400-123-4567"
+    phone: "0981742817",
+    wechat: "wxid_oau94b7rj7vj22",
+    zalo: "0896995399",
+    tiktok: "@allen96750",
+    facebook: "https://www.facebook.com/"
   },
   footer: {
     slogan: "Maca Candy - 男性健康新选择",

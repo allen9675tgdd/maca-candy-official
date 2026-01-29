@@ -58,7 +58,9 @@ export default function Footer() {
                         <ul className="space-y-2 text-sm text-white/60">
                             <li>电话：{siteConfig.contact.phone}</li>
                             <li>微信：{siteConfig.contact.wechat}</li>
-                            <li>邮箱：{siteConfig.contact.email}</li>
+                            <li>Zalo：{siteConfig.contact.zalo}</li>
+                            <li>TikTok：{siteConfig.contact.tiktok}</li>
+                            <li>Facebook：Maca Candy Official</li>
                         </ul>
                     </div>
                 </div>

@@ -112,11 +112,22 @@ export default function Contact() {
             hoverBorder: 'group-hover:border-brand-500/50'
         },
         {
-            key: 'email',
-            icon: Mail,
-            label: '发送邮件',
-            value: siteConfig.contact.email,
-            action: () => window.location.href = `mailto:${siteConfig.contact.email}`,
+            key: 'tiktok',
+            icon: TikTokIcon,
+            label: 'TikTok',
+            value: siteConfig.contact.tiktok,
+            action: () => window.open(`https://www.tiktok.com/${siteConfig.contact.tiktok}`, '_blank'),
+            color: 'text-brand-500',
+            bg: 'bg-brand-500/10',
+            border: 'border-brand-500/20',
+            hoverBorder: 'group-hover:border-brand-500/50'
+        },
+        {
+            key: 'facebook',
+            icon: Facebook,
+            label: 'Facebook',
+            value: 'Maca Candy Official',
+            action: () => window.open(siteConfig.contact.facebook, '_blank'),
             color: 'text-brand-500',
             bg: 'bg-brand-500/10',
             border: 'border-brand-500/20',
